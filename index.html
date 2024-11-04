@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Digital Card</title>
+    <title>Digital Card</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="card" onclick="flipCard()">
-        <div class="card-face card-front">
-            <h1>Your Name</h1>
-            <p>Email: your.email@example.com</p>
-        </div>
-        <div class="card-face card-back">
-            <p>Your One-Line Introduction</p>
+    <div class="card-container">
+        <div class="card" onclick="flipCard()">
+            <div class="card-face card-front">
+                <h1>Your Name</h1>
+                <p>Email: your.email@example.com</p>
+            </div>
+            <div class="card-face card-back">
+                <p>Your One-Line Introduction</p>
+                <a href="mailto:your.email@example.com" class="contact-btn">Get in Touch</a>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
