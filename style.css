@@ -15,7 +15,7 @@ body {
 }
 
 .card-container {
-    perspective: 1000px;
+    perspective: 1500px;
 }
 
 .card {
@@ -23,10 +23,15 @@ body {
     height: 200px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.8s ease;
+    transition: transform 0.8s ease, box-shadow 0.4s ease;
     cursor: pointer;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
+}
+
+.card:hover {
+    transform: scale(1.05) rotateY(10deg) rotateX(5deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
 .card-face {
@@ -41,7 +46,6 @@ body {
     border-radius: 15px;
     padding: 20px;
     box-sizing: border-box;
-    transition: all 0.4s ease;
 }
 
 .card-front {
@@ -55,12 +59,8 @@ body {
     transform: rotateY(180deg);
 }
 
-.card.flipped .card-front {
+.card.flipped {
     transform: rotateY(180deg);
-}
-
-.card.flipped .card-back {
-    transform: rotateY(0);
 }
 
 h1 {
@@ -90,5 +90,5 @@ p {
 .contact-btn:hover {
     background: linear-gradient(45deg, #f06595, #ff6b6b);
     box-shadow: 0 6px 20px rgba(255, 107, 107, 0.8);
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
